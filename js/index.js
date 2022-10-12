@@ -21,15 +21,14 @@ function calculateAll() {
 
   // end of test
 
-  // ITERATION 2
+  // ITERATION 2 + // ITERATION 3
+  let sum = 0;
   const allProducts = document.querySelectorAll('.product');
-  //updateSubtotal(singleProduct);
   allProducts.forEach(element => {
-    updateSubtotal(element);
+    sum += updateSubtotal(element);
   });
-
-  // ITERATION 3
-  //... your code goes here
+  let total = document.querySelector("#total-value span");
+  total.innerHTML = sum;
 }
 
 // ITERATION 4
